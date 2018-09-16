@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="jumbotron">
+  <h1 class="display-4">产品列表</h1>
+
+    </div>
+<br>
+    <table class="table table-dark">
+  <tr>
+      <th>ID</th>
+    <th>Name</th>
+    <th>Size</th>
+      <th>Style</th>
+    <th>Color</th>
+      <th>Number in Stock</th>
+  </tr>
+  {% for product in all_products %}
+      <tr>
+      <td>
+              {{ product.pk}}
+          </td>
+    <td>
+        {{ product.name}}
+    </td>
+      <td>
+        {{ product.size}}
+    </td>
+      <td>
+        {{ product.style}}
+    </td>
+      <td>
+        {{ product.color}}
+    </td>
+      <td>
+
+        {{ product.number_in_stock}}
+    </td>
+          <td>
+              <button onclick="location.href = '/products/import_export';" class="btn btn-success">进/出货</button>
+          </td>
+      </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+

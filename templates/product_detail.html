@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <table>
+  <tr>
+      <th>ID</th>
+    <th>Name</th>
+    <th>Size</th>
+      <th>Style</th>
+    <th>Color</th>
+      <th>Number in Stock</th>
+      <th>Number in Stock</th>
+  </tr>
+
+      <tr>
+          <td>
+              {{ product.pk}}
+          </td>
+          <td>
+              {{ product.name}}
+          </td>
+          <td>
+              {{ product.size}}
+          </td>
+          <td>
+              {{ product.style}}
+          </td>
+          <td>
+              {{ product.color}}
+          </td>
+          <td>
+              {{ product.number_in_stock}}
+          </td>
+          <td>
+              <button class="btn btn-success">edit</button>
+          </td>
+      </tr>
+
+</table>
+{% endblock %}

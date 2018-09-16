@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>用户信息</h1>
+    <p>用户名：{{ user.username }}</p>
+    <p>邮箱：{{ user.email }}</p>
+    <p>名字：{{ user.first_name }} {{ user.last_name }}</p>
+
+{% endblock %}
